@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es6",
+    "jsx": "react",
+    "module": "commonjs",
+    "outDir": "build",
+    "rootDirs": ["src", "test"],
+    "paths": {
+      "@app/*": ["src/*"],
+      "@test/*": ["test/*"]
+    },
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "sourceMap": true
+  },
+  "include": ["src/**/*", "test/**/*"],
+  "exclude": ["node_modules"]
+}
