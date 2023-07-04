@@ -34,7 +34,7 @@ const App: React.FC = ({}) => {
   }
 
   return (
-    <div className='w-fit md:w-2/3 lg:w-1/2 h-full m-auto flex flex-col justify-center items-center font-inter'>
+    <div className='w-full md:w-2/3 lg:w-1/2 h-full m-auto flex flex-col justify-center items-center font-inter'>
       <Header handleUpdate={handleUpdate} />
       <MainPage data={data} removeData={removeData} />
       <footer>

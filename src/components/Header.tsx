@@ -24,7 +24,7 @@ export const Header: React.FC<PropsType> = ({ handleUpdate }: PropsType) => {
   return (
     <div className='w-full flex flex-row justify-between items-center p-5'>
       <LiaBirthdayCakeSolid data-testid='logo' size='3em' color='#ce0055' />
-      <div className='text-2xl font-bold text-[#ce0055]'>My birthday calendar</div>
+      <div className='text-xl font-bold text-[#ce0055]'>My birthday calendar</div>
       <BsPatchPlus data-testid='add' size='2em' className='cursor-pointer' onClick={handleClick} />
       {modalOpen && <Modal setIsOpen={handleClick} handleSubmit={handleSubmit} />}
     </div>
