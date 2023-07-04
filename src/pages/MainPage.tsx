@@ -49,7 +49,7 @@ export const MainPage: React.FC<PropsType> = ({ data, removeData }: PropsType) =
     )
     const year = isBeforeDate ? getYear(new Date()) + 1 : getYear(new Date())
 
-    return differenceInDays(new Date(year, Number(friend.month) - 1, Number(friend.day)), new Date())
+    return differenceInDays(new Date(year, Number(friend.month) - 1, Number(friend.day)), new Date()) + 1
   }
 
   const sortByNextBirthday = (a: DataType, b: DataType) => calcNextBirthday(a) - calcNextBirthday(b)
@@ -67,8 +67,9 @@ export const MainPage: React.FC<PropsType> = ({ data, removeData }: PropsType) =
       {renderTodayAlert()}
       {data.sort(sortByNextBirthday).map((friend, i) => (
         <div
+          data-testid='birthday-element'
           key={friend.name}
-          className='flex flex-col w-full rounded-md cursor-pointer my-1 p-2 border bg-[#f7f7f7] border-[#e3e3e3] font-inter'
+          className='flex flex-col w-full rounded-md my-1 p-2 border bg-[#f7f7f7] border-[#e3e3e3] font-inter'
         >
           <div className='flex flex-row justify-between items-center mb-2'>
             <div className='font-inter font-medium'>{renderName(friend)}</div>
@@ -77,7 +78,7 @@ export const MainPage: React.FC<PropsType> = ({ data, removeData }: PropsType) =
           <div className='flex flex-row justify-between items-center'>
             <div className='text-xs tracking-wide'>{renderBirthday(friend)}</div>
             <div>
-              <BiTrash onClick={() => removeData(i)} />
+              <BiTrash className='cursor-pointer' onClick={() => removeData(i)} />
             </div>
           </div>
         </div>

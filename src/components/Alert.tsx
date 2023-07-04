@@ -12,11 +12,11 @@ type PropsType = {
 
 export const Alert: React.FC<PropsType> = ({ date, indexOfAlert, onClose }: PropsType) => {
   return (
-    <div className='w-full rounded-md p-3 border bg-[#faf0f4] border-[#facfe0] mb-2'>
-      <Confetti className='w-full h-full' numberOfPieces={100} />
+    <div data-testid='alert' className='w-full rounded-md p-3 border bg-[#faf0f4] border-[#facfe0] mb-2'>
+      {/* <Confetti className='w-full h-full' numberOfPieces={100} /> */}
       <div className='flex flex-row justify-between items-center mb-3 font-semibold'>
         <div>Today is {date.name}'s birthday!</div>
-        <GrClose className='cursor-pointer' onClick={() => onClose(indexOfAlert)} />
+        <GrClose data-testid='close-button' className='cursor-pointer' onClick={() => onClose(indexOfAlert)} />
       </div>
       <div className='text-sm text-slate-400'>
         Birthdays are a perfect opportunity to show appreciation and make someone feel loved and cherished. A heartfelt
