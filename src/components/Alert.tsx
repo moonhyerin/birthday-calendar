@@ -1,6 +1,7 @@
 import React from 'react'
 import Confetti from 'react-confetti'
 import { GrClose } from 'react-icons/gr'
+import { BsFillSuitHeartFill } from 'react-icons/bs'
 
 import { DataType } from '@app/type'
 
@@ -13,7 +14,7 @@ type PropsType = {
 export const Alert: React.FC<PropsType> = ({ date, indexOfAlert, onClose }: PropsType) => {
   return (
     <div data-testid='alert' className='w-full rounded-md p-3 border bg-[#faf0f4] border-[#facfe0] mb-2'>
-      {/* <Confetti className='w-full h-full' numberOfPieces={100} /> */}
+      <Confetti className='w-full h-full' numberOfPieces={100} />
       <div className='flex flex-row justify-between items-center mb-3 font-semibold'>
         <div>Today is {date.name}'s birthday!</div>
         <GrClose data-testid='close-button' className='cursor-pointer' onClick={() => onClose(indexOfAlert)} />
@@ -24,7 +25,8 @@ export const Alert: React.FC<PropsType> = ({ date, indexOfAlert, onClose }: Prop
         your heart.
         <br />
         Small effort from you can have a big impact on someone's special day. Let's spread joy, create happiness, and
-        make birthdays even more special!❤️
+        make birthdays even more special!
+        <BsFillSuitHeartFill className='inline ml-1' />
       </div>
     </div>
   )

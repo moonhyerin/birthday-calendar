@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { GrClose } from 'react-icons/gr'
+import { MdCelebration } from 'react-icons/md'
 
 import { DataType } from '@app/type'
 
@@ -85,7 +86,10 @@ export const Modal: React.FC<PropsType> = ({ setIsOpen, handleSubmit }: PropsTyp
           </div>
           <div className='flex flex-col justify-center items-center bg-white rounded-lg'>
             <div className='px-6 py-6 lg:px-8'>
-              <h3 className='font-inter text-2xl font-semibold mb-4 text-gray-900 '>Add new birthday 🎉</h3>
+              <h3 className='font-inter text-2xl font-semibold mb-4 text-gray-900 '>
+                Add new birthday
+                <MdCelebration className='inline' />
+              </h3>
               <div className='space-y-6'>
                 <input
                   type='text'

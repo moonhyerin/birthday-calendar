@@ -6,8 +6,8 @@
   "private": true,
   "scripts": {
     "test": "jest",
-    "build": "webpack --mode production --config webpack.config.js",
-    "start": "webpack serve --mode development --hot"
+    "build": "webpack --mode production --config webpack.config.prod.js",
+    "start": "webpack serve --mode development --hot --config webpack.config.dev.js"
   },
   "dependencies": {
     "axios": "^1.4.0",
