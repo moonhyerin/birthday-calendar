@@ -6,7 +6,6 @@ import { DataType } from '@app/type'
 export type PropsType = {
   setIsOpen: () => void
   handleSubmit: (newDate: DataType) => void
-  // children: React.ReactNode
 }
 
 export const Modal: React.FC<PropsType> = ({ setIsOpen, handleSubmit }: PropsType) => {
